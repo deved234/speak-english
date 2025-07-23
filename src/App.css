@@ -1,180 +1,43 @@
-.App {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+@media (max-width: 600px) {
+  .login-container {
+    padding: 1rem;
+  }
+  .login-card {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+  .dashboard-header, .dashboard-content {
+    padding: 1rem 0.5rem;
+  }
+  .dashboard-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  .dashboard-title {
+    font-size: 1.1rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .lesson-image {
+    height: 120px;
+    font-size: 2rem;
+  }
+  .lesson-content {
+    padding: 0.75rem;
+  }
+  .lesson-title {
+    font-size: 1rem;
+  }
+  .attendance-table th, .attendance-table td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
 }
 
-.login-container {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-}
-
-.login-card {
-  background: white;
-  border-radius: 1rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  padding: 3rem;
-  width: 100%;
-  max-width: 400px;
-}
-
-.login-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.login-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1e293b;
-  margin-bottom: 0.5rem;
-}
-
-.login-subtitle {
-  color: #64748b;
-  font-size: 1rem;
-}
-
-.dashboard-container {
-  min-height: 100vh;
-  background-color: #f8fafc;
-}
-
-.dashboard-header {
-  background: white;
-  border-bottom: 1px solid #e2e8f0;
-  padding: 1rem 0;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-}
-
-.dashboard-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.dashboard-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #1e293b;
-}
-
-.dashboard-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.lesson-card {
-  background: white;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.lesson-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.lesson-image {
-  width: 100%;
-  height: 200px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 3rem;
-}
-
-.lesson-content {
-  padding: 1.5rem;
-}
-
-.lesson-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #1e293b;
-  margin-bottom: 0.5rem;
-}
-
-.lesson-description {
-  color: #64748b;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-.lesson-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.875rem;
-  color: #64748b;
-}
-
-.lesson-level {
-  background: #e0e7ff;
-  color: #3730a3;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-weight: 500;
-}
-
-.attendance-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: white;
-  border-radius: 0.75rem;
-  overflow: hidden;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-}
-
-.attendance-table th,
-.attendance-table td {
-  padding: 1rem;
-  text-align: left;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.attendance-table th {
-  background: #f8fafc;
-  font-weight: 600;
-  color: #374151;
-}
-
-.status-present {
-  background: #dcfce7;
-  color: #166534;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-weight: 500;
-}
-
-.status-absent {
-  background: #fee2e2;
-  color: #991b1b;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-weight: 500;
-}
-
-.status-late {
-  background: #fef3c7;
-  color: #92400e;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-weight: 500;
-} 
+/* Add viewport meta tag for mobile scaling (in public/index.html):
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+*/ 
