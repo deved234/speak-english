@@ -100,7 +100,10 @@ const UserLessonDetail = ({ user, onLogout }) => {
           {tab === 'grammar' && (
             <div>
               <h2 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '1rem' }}>Grammar</h2>
-              <div style={{ color: '#64748b', fontSize: '1rem' }}>{lesson.grammar}</div>
+              <div 
+                style={{ color: '#64748b', fontSize: '1rem' }} 
+                dangerouslySetInnerHTML={{ __html: lesson.grammar }}
+              />
             </div>
           )}
 
