@@ -7,34 +7,15 @@ export const users = [
     role: 'admin',
     name: 'Administrator'
   },
-  {
-    id: 1,
-    username: 'deved atef',
-    password: '123',
-    role: 'admin',
-    name: 'Administrator'
-  },
+
   {
     id: 2,
-    username: 'user',
-    password: 'user123',
-    role: 'user',
-    name: 'John Doe'
-  },
-  {
-    id: 3,
     username: 'student',
-    password: 'student123',
-    role: 'user',
-    name: 'Jane Smith'
-  },
-  {
-    id: 3,
-    username: 'deved',
     password: '123',
     role: 'user',
-    name: 'Jane deved atef'
-  }
+    name: 'student'
+  },
+
 ];
 
 // Lessons organized by level
@@ -67,20 +48,27 @@ export const levels = Array.from({ length: 7 }, (_, levelIdx) => ({
         description: `This is lesson ${lessonIdx + 1} of unit ${unitIdx + 1} in level ${levelIdx + 1}.`,
         words,
         grammar: `This is the grammar explanation for lesson ${lessonIdx + 1} of unit ${unitIdx + 1} in level ${levelIdx + 1}.`,
-        videoUrl: `https://www.youtube.com/embed/dQw4w9WgXcQ?level=${levelIdx + 1}&unit=${unitIdx + 1}&lesson=${lessonIdx + 1}`,
+        videoUrl: `level=${levelIdx + 1}&unit=${unitIdx + 1}&lesson=${lessonIdx + 1}`,
         test: [
           {
-            question: `What is the word for this picture?`,
+            question: `its a .......... `,
             imageUrl: '/images/camel.jpg',
             options: ['camel', 'Book', 'Cat', 'Dog'],
             correct: 0
           },
           {
-            question: `Which word matches the picture?`,
-            imageUrl: '/images/Sea.jpg',
-            options: ['Apple', 'Book', 'sea', 'Car'],
+            question: `we swim in the  .......... `,
+            imageUrl: '/images/sea.jpg',
+            options: ['camel', 'Book', 'Cat', 'sea'],
+            correct: 3
+          },
+          {
+            question: `that is........`,
+            imageUrl: '/images/Elephant.jpg',
+            options: ['Apple', 'Book', 'elephant', 'Car'],
             correct: 2
           }
+          
         ]
       };
     })
