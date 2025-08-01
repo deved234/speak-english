@@ -55,6 +55,21 @@ export const levels = Array.from({ length: 7 }, (_, levelIdx) => ({
           { word: 'apple', imageUrl: '/images/apple.jpg' },
         ];
       }
+              else if (levelIdx === 4 && unitIdx === 0 && lessonIdx === 2) {
+         words = [
+           { word: 'dolphin', imageUrl: '/images/dolphin.jpg' },
+           { word: 'parrot', imageUrl: '/images/parrot.jpg' },
+           { word: 'fox', imageUrl: '/images/fox.jpg' },
+         ];
+       }
+      else if (levelIdx === 4 && unitIdx === 0 && lessonIdx === 3) {
+        words = [
+          { word: 'panda', imageUrl: '/images/panda.jpg' },
+          { word: 'tiger', imageUrl: '/images/tiger.jpg' },
+          { word: 'giraffe', imageUrl: '/images/giraffe.jpg' },
+          { word: 'crocodile', imageUrl: '/images/crocodile.jpg' },
+        ];
+      }
 
        else {
          // Generate unique words for each lesson based on level, unit, and lesson indices
@@ -120,6 +135,10 @@ export const levels = Array.from({ length: 7 }, (_, levelIdx) => ({
            ? 'There is no grammar in this lesson.'
            : (levelIdx === 4 && unitIdx === 0 && lessonIdx === 1)
            ? 'Vowels : A, E, I, O, U - Learn the vowel sounds with pictures!<br><br><img src="/images/vowels.jpg" alt="Vowel characters A, E, I, O, U" style="max-width: 100%; height: auto; margin-top: 10px;"><br><br><strong>A/An Grammar:</strong><br> Use "a" before consonant sounds and "an" before vowel sounds.<br><br><br><img src="/images/a an.jpg" alt="A or An grammar question with thinking emoji" style="max-width: 100%; height: auto; margin-top: 10px;">'
+           : (levelIdx === 4 && unitIdx === 0 && lessonIdx === 2)
+           ? 'where do animals live?<br><b> example : </b><br><br>the camel live in desert <br><img src="/images/camel.jpg" alt="Vowel characters A, E, I, O, U" style="max-width: 25%; height: auto; margin-top: 10px;"> <img src="/images/desert.jpg" alt="Vowel characters A, E, I, O, U" style="max-width: 25%; height: auto; margin-top: 10px;"><br> <br><strong>where do animals live?</strong><br> example : <br><br> the monkey live in jungle <br><img src="/images/monkey.jpg" alt="A or An grammar question with thinking emoji" style="max-width: 25%; height: auto; margin-top: 10px;"><img src="/images/jungle.jpg" alt="A or An grammar question with thinking emoji" style="max-width: 25%; height: auto; margin-top: 10px;">'
+           : (levelIdx === 4 && unitIdx === 0 && lessonIdx === 3)
+           ? 'what do animals eat?<br><b> example : </b><br><br>the lion eats meat<br><img src="/images/lion.jpg" alt="Vowel characters A, E, I, O, U" style="max-width: 25%; height: auto; margin-top: 10px;"> <img src="/images/meat.jpg" alt="Vowel characters A, E, I, O, U" style="max-width: 25%; height: auto; margin-top: 10px;"><br> <br><strong>what do animals eat?</strong><br> example : <br><br> the giraffe eat plants<br><img src="/images/giraffe.jpg" alt="A or An grammar question with thinking emoji" style="max-width: 100%; height: auto; margin-top: 10px;"><img src="/images/plant.jpg" alt="A or An grammar question with thinking emoji" style="max-width: 25%; height: auto; margin-top: 10px;">'
            : `This is the grammar explanation for lesson ${lessonIdx + 1} of unit ${unitIdx + 1} in level ${levelIdx + 1}.`,
         videoUrl: `level=${levelIdx + 1}&unit=${unitIdx + 1}&lesson=${lessonIdx + 1}`,
                  test: levelIdx === 4 && unitIdx === 0 && lessonIdx === 1 ? [
@@ -163,6 +182,50 @@ export const levels = Array.from({ length: 7 }, (_, levelIdx) => ({
              question: `( a/an ) umbrella`,
              imageUrl: '/images/umbrella.jpg',
              options: ['a', 'an'],
+             correct: 1
+           }
+         ] : levelIdx === 4 && unitIdx === 0 && lessonIdx === 2 ? [
+           {
+             question: `sea`,
+             imageUrl: '/images/sea.jpg',
+             options: ['desert', 'sea', 'jungle'],
+             correct: 0
+           },
+           {
+             question: `desert`,
+             imageUrl: '/images/desert.jpg',
+             options: ['sea', 'desert', 'jungle'],
+             correct: 1
+           },
+           {
+             question: `jungle`,
+             imageUrl: '/images/jungle.jpg',
+             options: ['sea', 'desert', 'jungle'],
+             correct: 2
+           }
+         ] : levelIdx === 4 && unitIdx === 0 && lessonIdx === 3 ? [
+           {
+             question: `a ......... eats plants`,
+             imageUrl: '/images/panda.jpg',
+             options: ['lion', 'panda', 'ant'],
+             correct: 1
+           },
+           {
+             question: `a tiger eats .............`,
+             imageUrl: '/images/tiger.jpg',
+             options: ['meat', 'plants'],
+             correct: 0
+           },
+           {
+             question: `a ............. eats meat`,
+             imageUrl: '/images/crocodile.jpg',
+             options: ['giraffe', 'crocodile', 'monkey'],
+             correct: 1
+           },
+           {
+             question: `a camel eats ............`,
+             imageUrl: '/images/camel.jpg',
+             options: ['meats', 'plants'],
              correct: 1
            }
          ] : [
